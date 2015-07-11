@@ -8,12 +8,12 @@ var __Table = function(width) {
         getInitialState:function(){
             return ({
                 rows:[
-                    {column_a:'a', column_b:'f', column_b:'z'},
-                    {column_a:'b', column_b:'g', column_b:'z'},
-                    {column_a:'d', column_b:'h', column_b:'x'},
-                    {column_a:'s', column_b:'j', column_b:'c'},
-                    {column_a:'j', column_b:'x', column_b:'z'},
-                    {column_a:'a', column_b:'f', column_b:'a'}
+                    {column_a:'a', column_b:'f', column_c:'z'},
+                    {column_a:'b', column_b:'g', column_c:'z'},
+                    {column_a:'d', column_b:'h', column_c:'x'},
+                    {column_a:'s', column_b:'j', column_c:'c'},
+                    {column_a:'j', column_b:'x', column_c:'z'},
+                    {column_a:'a', column_b:'f', column_c:'a'}
                 ]
 
             })
