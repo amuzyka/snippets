@@ -1,21 +1,19 @@
-var _Table = function(width) {
+var __Table = function(width) {
 
     var Table = FixedDataTable.Table,
         Column = FixedDataTable.Column;
 
 
-    var React_Fixed_Data_Table = React.createClass({
+    var __React_Fixed_Data_Table = React.createClass({
         getInitialState:function(){
             return ({
                 rows:[
-                    {p:'a', e:'x', f:'a'},
-                    {p:'b', e:'v', f:'d'},
-                    {p:'c', e:'h', f:'s'},
-                    {p:'c', e:'h', f:'s'},
-                    {p:'a', e:'h', f:'s'},
-                    {p:'h', e:'h', f:'s'},
-                    {p:'c', e:'h', f:'s'},
-                    {p:'b', e:'d', f:'a'}
+                    {column_a:'a', column_b:'f', column_b:'z'},
+                    {column_a:'b', column_b:'g', column_b:'z'},
+                    {column_a:'d', column_b:'h', column_b:'x'},
+                    {column_a:'s', column_b:'j', column_b:'c'},
+                    {column_a:'j', column_b:'x', column_b:'z'},
+                    {column_a:'a', column_b:'f', column_b:'a'}
                 ]
 
             })
@@ -73,11 +71,11 @@ var _Table = function(width) {
             );
         },
 
-        _rowGetter:function(rowIndex){
+        _row_getter:function(rowIndex){
             return this.state.rows[rowIndex];
         },
 
-        _cellRenderer:function(value, index, obj, b, n){
+        _cell_renderer:function(value, index, obj, b, n){
             var value = '';
             if(!index){
                 value = obj.p;
@@ -93,7 +91,7 @@ var _Table = function(width) {
         },
 
         _sorted:false,
-        _sortColumn: function(r) {
+        _sort_column: function(r) {
              
             var index = parseInt(r.target.id),
                 field = 'f';
@@ -133,10 +131,10 @@ var _Table = function(width) {
         }
     });
 
-    React_Fixed_Data_Table = React.createFactory(React_Fixed_Data_Table);
+    __React_Fixed_Data_Table = React.createFactory(__React_Fixed_Data_Table);
 
     React.render(
-        React_Fixed_Data_Table(),
+        __React_Fixed_Data_Table(),
         document.getElementById('table')
     );
     
