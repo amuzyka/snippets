@@ -20,7 +20,10 @@ function iterate(obj, objToCompare, diffs, parentProperty){
 			}
 
 		}
-		else diffs.push(property); 
+		else{ 
+		   parentProperty = (parentProperty) ? (parentProperty += '.'+property) : property;
+		   diffs.push(parentProperty); 
+		}
 
 	}//end of iteration
 
