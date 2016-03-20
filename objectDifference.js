@@ -3,20 +3,16 @@ function iterate(obj, objToCompare, diffs, parentProperty){
 	for(var property in obj){
 
 		if(obj.hasOwnProperty(property) && objToCompare.hasOwnProperty(property)){
-
+			
+			parentProperty = (parentProperty) ? (parentProperty += '.'+property) : property;
+			
 			if(typeof obj[property] === 'object'){
-				
-				parentProperty = (parentProperty) ? (parentProperty += '.'+property) : property;
 				iterate(obj[property], objToCompare[property], diffs, parentProperty);
 			}
 			else {
-				
-	
-				if(obj[property] !== objToCompare[property]){
-					if(parentProperty)diffs.push(parentProperty + '.' +property);
-					else diffs.push(property)	
+			        if(obj[property] !== objToCompare[property]){
+					 diffs.push(parentProperty)	
 				}
-				
 			}
 
 		}
